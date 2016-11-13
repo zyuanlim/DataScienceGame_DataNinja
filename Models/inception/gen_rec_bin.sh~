@@ -1,0 +1,12 @@
+#python make_list.py --recursive 1 ./train sf1 --train_ratio 0.75
+python make_list.py --recursive 1 ~/dsg/data/roof_augmented/organised/train train # --train_ratio 0.75
+python make_list.py --recursive 1 ~/dsg/data/roof_augmented/organised/val val
+
+#make sure conda install opencv
+#im2rec_path=/home/tairuic/Downloads/mxnet/bin/im2rec
+im2rec_path=~/mxnet/bin/im2rec
+#im2rec_path=~/mxnet/tools/
+
+python ~/mxnet/tools/im2rec.py train.lst ~/dsg/data/roof_augmented/organised/train --resize=224 --color=1 --encoding='.jpg'
+python ~/mxnet/tools/im2rec.py val.lst ~/dsg/data/roof_augmented/organised/val --resize=224 --color=1 --encoding='.jpg'
+

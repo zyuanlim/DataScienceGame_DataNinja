@@ -1,0 +1,7 @@
+for batch in 1
+do
+    #python train_inception_bn.py --train-dataset train.rec --val-dataset val.rec --data-dir './data' --model-prefix ./model/ckpt-shuffle${batch} --gpus 0
+    python train_inception_bn.py --train-dataset train.rec --val-dataset val.rec --data-dir './data' --model-prefix './model/incept' --batch-size 40 --log-dir './logs' --log-file 'retrain' --gpus 1 --num-epochs 10 --num-examples 35996 #--num-classes 4
+    #save the mean image
+    #cp mean.bin mean-rand-shuffle${batch}.bin
+done

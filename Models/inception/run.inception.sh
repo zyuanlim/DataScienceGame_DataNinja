@@ -1,0 +1,1 @@
+python train_inception_bn.py --train-dataset train.rec --val-dataset val.rec --data-dir './data' --model-prefix './model/incept' --batch-size 40 --log-dir './logs' --log-file 'retrain' --gpus 1 --num-epochs 10 --num-examples 35996

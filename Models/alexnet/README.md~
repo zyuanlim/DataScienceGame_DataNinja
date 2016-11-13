@@ -1,0 +1,5 @@
+How to train model:
+caffe train -solver ./solver.prototxt -weights models/bvlc_alexnet/bvlc_alexnet.caffemodel -gpu 1 2>&1 | tee train.log
+
+How to get prediction:
+python run_alex_predict.py

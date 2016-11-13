@@ -1,0 +1,1 @@
+Run the 3 preprocessing steps (part1, part2, part3 Python scripts) to remove redundant images, add augmented images and organised all training images into organised->train/val->classes folder. Remember to change directory path in scripts and play with augmented times and other parameters (if you wish).
